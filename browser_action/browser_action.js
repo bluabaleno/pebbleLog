@@ -6,7 +6,7 @@ for (var i = 0; i < wordsWritten.length; i++){
 	wordsWritten[i].addEventListener("click", function(){
 		var element = document.getElementById('v0');
 		var text = element.innerText;
-		var bold = document.getElementsByTagName("strong")[1].innerText;
+		var bold = document.getElementById("v0")[1].innerText;
 		var str = text.replace(bold,"");
 		var word;
 		var translation;
