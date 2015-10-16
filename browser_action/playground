@@ -1,0 +1,1 @@
+var wordbubble = document.getElementsByClassName("vortarobobelo")[0].children[0]
