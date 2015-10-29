@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<body>
+<body ng-csp>
+	<script src="../firebase.js" ></script>
+	<script src="../action.js" ></script>
+	<script src="../angular.min.js"></script>
+	<script src="../angularfire.min.js"></script>
 	<script src="browser_action.js" ></script>
-	<style type="text/css">
+
+ 	<style type="text/css">
 		#mainPopup {
 			padding: 10px;
 			height: 200px;
@@ -11,22 +16,13 @@
 		h1 {
 			font-size: 2em;
 		}
-	</style>
-
-	<div id="mainPopup">
-
-		<div class="example">First div element with class="example".</div>
-
-		<div class="example">Second div element with class="example".</div>
-
-		<div class="results" >target.textContent</div>
-
-
-		<button id="test">Try it</button>
-
-
+	</style> 
+	<div id="mainPopup" ng-app='myApp' ng-controller="myAppCtrl">
+    	<div ng-repeat="(f1,f2) in data">
+      		{{f1}}: {{f2}}
+    	</div>
 	</div>
 
 </body>
 
-</html>
+

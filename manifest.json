@@ -1,22 +1,33 @@
 {
 
   "manifest_version": 2,
-  "name": "Vortojo",
+  "name": "VortojoFire",
   "version": "0.1",
-  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
+  "web_accessible_resources": [
+    "/firebase.js"
+  ],
+  "content_scripts": [
+    {
+      "matches":["http://en.lernu.net/*"],
+      "js":["firebase.js","action.js","angular.min.js","angularfire.min.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'",
 
   "default_locale": "en",
   "description": "Saved words",
   "icons":{
     "16": "img/icon16.png",
-    "48": "img/icon48.png"
-
-    },
+    "48": "img/icon48.png" 
+          },
   "browser_action": {
     "default_icon": {
       "16": "img/icon16"
       },
-    "default_title": "browser action",
+    "default_title": "VortojoFire",
     "default_popup": "browser_action/browser_action.html"
-  }
+  },
+  "permissions": [
+  "tabs"
+  ]
 }
