@@ -2,7 +2,7 @@
 var wordsWritten = document.getElementsByTagName("var");
 
 var wordBank ={};
-var fireBank = new Firebase('https://lernubaleno.firebaseio.com/');
+var fireBank = new Firebase('https://everyoneclick.firebaseio.com/');
 
 //Getting the word and translation resulted from the user's click.
 for (var i = 0; i < wordsWritten.length; i++){
