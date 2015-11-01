@@ -1,4 +1,4 @@
-
+//attaching eventlisteners to all the words 
 var wordsWritten = document.getElementsByTagName("var");
 
 var wordBank ={};
