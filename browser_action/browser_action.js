@@ -3,7 +3,7 @@ var app = angular.module("myApp",["firebase"]);
 //retrieving data from firebase
 app.controller("myAppCtrl", ["$scope", "$firebaseObject",
           function($scope,$firebaseObject){
-          var ref = new Firebase("https://lernubaleno.firebaseio.com/");
+          var ref = new Firebase("https://everyoneclick.firebaseio.com/");
           $scope.data = $firebaseObject(ref);
 }]);
 
